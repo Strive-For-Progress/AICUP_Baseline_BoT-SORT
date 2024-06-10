@@ -165,7 +165,7 @@ def evaluate_py(distmat, q_pids, g_pids, q_camids, g_camids, max_rank, use_metri
     else:
         return eval_market1501(distmat, q_pids, g_pids, q_camids, g_camids, max_rank)
 
-
+# use_cython=True
 def evaluate_rank(
         distmat,
         q_pids,
@@ -174,7 +174,7 @@ def evaluate_rank(
         g_camids,
         max_rank=50,
         use_metric_cuhk03=False,
-        use_cython=True,
+        use_cython=False,
 ):
     """Evaluates CMC rank.
     Args:

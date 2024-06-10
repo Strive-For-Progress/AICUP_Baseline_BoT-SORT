@@ -19,18 +19,19 @@ DATASETS:
   NAMES: ("AICUP",)
   TESTS: ("AICUP",)
 
+# batch size orginally 256
 SOLVER:
   BIAS_LR_FACTOR: 1.
 
-  IMS_PER_BATCH: 256
-  MAX_EPOCH: 60
+  IMS_PER_BATCH: 16
+  MAX_EPOCH: 1
   STEPS: [30, 50]
   WARMUP_ITERS: 2000
 
   CHECKPOINT_PERIOD: 1
 
 TEST:
-  EVAL_PERIOD: 60 # We didn't provide eval dataset
-  IMS_PER_BATCH: 256
+  EVAL_PERIOD: 1 # We didn't provide eval dataset
+  IMS_PER_BATCH: 16
 
 OUTPUT_DIR: logs/AICUP_115/bagtricks_R50-ibn

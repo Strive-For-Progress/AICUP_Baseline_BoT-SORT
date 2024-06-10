@@ -32,7 +32,7 @@ class ReidEvaluator(DatasetEvaluator):
         self._cpu_device = torch.device('cpu')
 
         self._predictions = []
-        self._compile_dependencies()
+        # self._compile_dependencies()
 
     def reset(self):
         self._predictions = []
